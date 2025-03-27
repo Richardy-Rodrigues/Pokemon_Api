@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useEffect, useState} from "react";
 
 function App() {
+  const {pokemon, setPokemon} = useState([]);
+
+  function loadAPI() {
+    let url = 'https://pokeapi.co/api/v2/pokemon/ditto';
+    fetch(url)
+    .then(response => response.json())
+    .then(json => console.log(json))
+    .catch(err => console.log(err));
+  }
+
+  useEffect(() => {
+    loadAPI();
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>TESTE</h1>
     </div>
   );
 }
