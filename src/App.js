@@ -26,6 +26,13 @@ function App() {
         </strong>
       </header>
 
+      <div>
+        <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
+        <div>Name: {pokemon.name}</div>
+        <div>Nº {pokemon.id}</div>
+        <div>Peso: {pokemon.weight / 10} Kg</div>
+        <div>Altura: {pokemon.height / 10} m</div>
+      </div>
       
     </div>
   );
