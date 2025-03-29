@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import './style.css';
+import pokemon_logo from './assets/pokemon_logo.png';
 
 function App() {
   const [pokemon, setPokemon] = useState(null);
@@ -43,26 +44,25 @@ function App() {
   return (
     <div className="container">
       <header>
-        <strong>
-          Pokemon API
-        </strong>
+        <img src={pokemon_logo} width={500} height={200}/>
       </header>
-
-      <form onSubmit={handleSubmit}>
-        <input 
-          type="text"
-          value={input}
-          onChange={handleInputChange}
-          placeholder="Digite o nome do Pokemon"
-        />
-        <button type="submit">Buscar</button>
-      </form>
+      <div className="main">
+        <form onSubmit={handleSubmit}>
+          <input 
+            type="text"
+            value={input}
+            onChange={handleInputChange}
+            placeholder="Digite o nome do Pokemon"
+          />
+          <button type="submit">Buscar</button>
+        </form>
+      </div>
 
       {loading && <div>Carregando...</div>}
 
       {pokemon && !loading && (
         <div>
-          <img src={pokemon.sprites.front_default} alt={pokemon.name}/>
+          <img src={pokemon.sprites.front_default} alt={pokemon.name} width={150} height={150}/>
           <div>Name: {pokemon.name}</div>
           <div>Nº {pokemon.id}</div>
           <div>Peso: {pokemon.weight / 10} Kg</div>
