@@ -8,7 +8,7 @@ Foi utilizado o **React** (https://reactnative.dev/)
 
 
 ## Prévia do App
-![App Screenshot](https://github.com/Richardy-Rodrigues/Pokemon-Api/src/assets/git-pokemon-api.gif?raw=true)
+![App Screenshot](https://github.com/Richardy-Rodrigues/Pokemon_Api/blob/main/src/assets/gif-pokemon-api.gif?raw=true)
 
 
 ## Deploy
